@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "comment_formatter"
+version = "0.2.0"
+description = ""
+authors = ["AlexPadron <alexander.f.padron@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.6"
+
+[tool.poetry.dev-dependencies]
+pytest = "^3.0"
+black = "19.3b0"
+click = "^7.0"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
