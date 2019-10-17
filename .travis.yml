@@ -2,11 +2,13 @@ language: python
 install:
 - pip install poetry
 - poetry install
-script:
-- "python -m pytest"
 
 matrix:
   include:
+    - name: "pytest"
+      python: 3.6
+      env:
+        - TEST_CMD="python -m pytest"
     - name: "black"
       python: 3.6
       env:
