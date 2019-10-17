@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "comment_formatter"
-version = "0.2.1"
+version = "0.3.0"
 authors = ["AlexPadron <alexander.f.padron@gmail.com>"]
 homepage = "https://github.com/AlexPadron/comment_formatter"
 description = "Formats comment blocks"
