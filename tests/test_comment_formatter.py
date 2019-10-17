@@ -3,7 +3,6 @@ import unittest
 
 from comment_formatter.formatter import rewrite_comments
 
-
 EXAMPLE_DIR = os.path.join(os.path.dirname(os.path.realpath(__file__)), "examples")
 
 

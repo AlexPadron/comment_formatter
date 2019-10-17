@@ -1,9 +1,9 @@
-from glob import glob
 import os
+from glob import glob
 
 import click
 
-from .formatter import rewrite_comments, rewrite_file
+from .formatter import rewrite_file
 
 
 @click.command()
