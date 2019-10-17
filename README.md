@@ -1,5 +1,7 @@
 # Comment Formatter for Python
 
+[![Build Status](https://travis-ci.org/AlexPadron/comment_formatter.svg?branch=master)](https://travis-ci.org/AlexPadron/comment_formatter)
+
 Comment formatter automatically restructures comments in your code to be compliant
 with line length standards.
 
