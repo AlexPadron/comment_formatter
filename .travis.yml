@@ -12,3 +12,8 @@ matrix:
       python: 3.6
       env:
         - TEST_CMD="black ."
+  include:
+    - name: "mypy"
+      python: 3.6
+      env:
+        - TEST_CMD="mypy comment_formatter/"

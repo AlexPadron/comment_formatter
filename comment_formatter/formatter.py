@@ -27,6 +27,8 @@ def get_text_for_comment(line: str) -> Optional[str]:
             return text[1:]
         else:
             return text
+    else:
+        raise AssertionError("Cannot get text for a line that isn't a comment")
 
 
 def get_words_in_comment(line: str) -> List[str]:
@@ -80,14 +82,14 @@ def rewrite_comments(source: str, max_line_length: int) -> str:
                 else:
                     break
 
-            all_comment_words = []
+            all_comment_words: List[str] = []
 
             for index in range(first_comment_index, last_comment_index + 1):
                 all_comment_words += get_words_in_comment(source_lines[index])
 
             # Once we have collected all words in a block, format them into appropriate lines
-            block_lines = []
-            current_line = []
+            block_lines: List[str] = []
+            current_line: List[str] = []
             current_line_length = 0
 
             for word in all_comment_words:
@@ -131,7 +133,7 @@ def rewrite_comments(source: str, max_line_length: int) -> str:
 def rewrite_file(
     file_name: str,
     check: bool,
-    max_line_length: Optional[str] = 100,
+    max_line_length: int = 100,
     output_file_name: Optional[str] = None,
 ) -> bool:
     """Rewrite a file to have comments with the correct length"""
