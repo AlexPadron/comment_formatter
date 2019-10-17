@@ -1,8 +1,9 @@
 language: python
 cache: pip
-
 env:
 - TEST_CMD="python -m pytest"
+script:
+- $TEST_CMD
 
 matrix:
   include:
