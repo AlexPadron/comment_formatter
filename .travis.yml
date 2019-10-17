@@ -3,10 +3,8 @@ cache: pip
 install:
 - pip install poetry
 - poetry install
-env:
-- TEST_CMD="python -m pytest"
 script:
-- $TEST_CMD
+- "python -m pytest"
 
 matrix:
   include:
