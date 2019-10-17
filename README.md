@@ -34,5 +34,7 @@ pip install comment-formatter
 ## Usage
 
 ```
-python -m comment_formatter.run /path/to/my/files [--line-length X]
+python -m comment_formatter.run /path/to/my/files [--line-length X] [--check]
 ```
+
+If the `check` flag is passed, the script will log an error and exit 1 instead of reformatting files.

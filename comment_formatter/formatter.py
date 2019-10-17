@@ -130,9 +130,10 @@ def rewrite_comments(source: str, max_line_length: int) -> str:
 
 def rewrite_file(
     file_name: str,
+    check: bool,
     max_line_length: Optional[str] = 100,
     output_file_name: Optional[str] = None,
-) -> None:
+) -> bool:
     """Rewrite a file to have comments with the correct length"""
     with open(file_name) as f:
         text = f.read()
@@ -146,6 +147,12 @@ def rewrite_file(
             "This indicates an internal error, please file a bug report"
         )
 
-    output_file_name = output_file_name or file_name
-    with open(output_file_name, "w") as f:
-        f.write(second_pass_text)
+    if check:
+        return text == first_pass_text
+    else:
+        output_file_name = output_file_name or file_name
+
+        with open(output_file_name, "w") as f:
+            f.write(second_pass_text)
+
+        return True
