@@ -1,5 +1,9 @@
 language: python
 cache: pip
+before_deploy:
+- pip install poetry
+install:
+- poetry install
 env:
 - TEST_CMD="python -m pytest"
 script:
