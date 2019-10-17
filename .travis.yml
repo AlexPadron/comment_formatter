@@ -1,0 +1,29 @@
+language: python
+install:
+- pip install poetry
+- poetry install
+script:
+- "echo hello world"
+
+matrix:
+  include:
+    - name: "pytest"
+      python: 3.6
+      env:
+        - TEST_CMD="python -m pytest"
+    - name: "black"
+      python: 3.6
+      env:
+        - TEST_CMD="black ."
+    - name: "mypy"
+      python: 3.6
+      env:
+        - TEST_CMD="mypy comment_formatter/"
+    - name: "flake8"
+      python: 3.6
+      env:
+        - TEST_CMD="flake8 comment_formatter/"
+    - name: "isort"
+      python: 3.6
+      env:
+        - TEST_CMD="isort --check"

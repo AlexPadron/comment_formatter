@@ -3,7 +3,6 @@ import unittest
 
 from comment_formatter.formatter import rewrite_comments
 
-
 EXAMPLE_DIR = os.path.join(os.path.dirname(os.path.realpath(__file__)), "examples")
 
 
@@ -27,6 +26,3 @@ class FormatterTest(unittest.TestCase):
 
             output_text = rewrite_comments(input_text, max_line_length=100)
             self.assertEqual(output_text, expected_output_text)
-
-            print("succeeded on", input_file_name)
-        self.fail()
