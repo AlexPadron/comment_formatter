@@ -12,17 +12,14 @@ matrix:
       python: 3.6
       env:
         - TEST_CMD="black ."
-  include:
     - name: "mypy"
       python: 3.6
       env:
         - TEST_CMD="mypy comment_formatter/"
-  include:
     - name: "flake8"
       python: 3.6
       env:
         - TEST_CMD="flake8 comment_formatter/"
-  include:
     - name: "isort"
       python: 3.6
       env:
