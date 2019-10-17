@@ -1,0 +1,12 @@
+language: python
+cache: pip
+
+env:
+- TEST_CMD="python -m pytest"
+
+matrix:
+  include:
+    - name: "black"
+      python: 3.6
+      env:
+        - TEST_CMD="black ."
