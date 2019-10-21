@@ -100,7 +100,7 @@ def rewrite_comments(source: str, max_line_length: int) -> str:
                     + 2
                     + len(word)
                     + current_line_length
-                    + (len(current_line) - 1)
+                    + (len(current_line))
                 ) <= max_line_length:
                     pass
                 elif len(current_line) > 0:
